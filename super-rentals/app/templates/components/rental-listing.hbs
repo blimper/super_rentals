@@ -1,4 +1,6 @@
 <h2>{{rental.title}}</h2>
+<button {{action "deleteRental" rental}}>Delete</button>
+{{#link-to "rentals.edit" rental}}{{rental.rental_id}}Edit{{/link-to}}
 <p>Owner: {{rental.owner}}</p>
 <p>Type: {{rental-property-type rental.type}} - {{rental.type}}</p>
 <p>Location: {{rental.city}}</p>

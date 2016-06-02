@@ -4,9 +4,23 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    'ember-sui-toolkit': {
+      // Include CSS that is deprecated and will be removed in Toolkit 3.0. Defaults to true but that's probably not what you want!
+      includeDeprecatedCss: false,
+
+      // This section includes the navbar and other core JS. Defaults to true
+      includeJsCore: false,
+
+      // This section includes the Bootstrap-style jQuery plugins (may be required for Ember components). Defaults to true.
+      includeJsPlugins: false,
+
+      // All the CSS. Defaults to true
+      includeCss: false
+    }
     // Add options here
   });
-
+  app.import( app.bowerDirectory + '/underscore/underscore.js' );
+  app.import( app.bowerDirectory + '/moment/moment.js' );
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

@@ -8,6 +8,15 @@ export default Ember.Component.extend({
     },
     imageHide() {
       this.set('isImageShowing', false);
+    },
+    show() {
+      this.controller.getProperties('id');
+    },
+    deleteRental(rental) {
+      const title = rental.get('title');
+      if (confirm(`This will delete ${title}! Do you want to proceed?`)) {
+        rental.destroyRecord();
+      }
     }
   }
 });
