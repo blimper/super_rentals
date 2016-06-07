@@ -1,0 +1,43 @@
+<div class = "form-horizontal">
+  <div class="form-group">
+    <label>Title</label>
+    <div>
+      {{input type="text" value=model.title class="form-control" placeholder="The title of your listing"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Owner</label>
+    <div>
+      {{input type="text" value=model.owner class="form-control" placeholder="The owner of your listing"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>City</label>
+    <div>
+      {{input type="text" value=model.city class="form-control" placeholder="The city of your listing"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>type</label>
+    <div>
+      {{input type="text" value=model.type class="form-control" placeholder="The type of your listing"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Image Link</label>
+    <div>
+      {{input type="text" value=model.image class="form-control" placeholder="Include and Image"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Number of Bedrooms</label>
+    <div>
+      {{input type="integer" value=model.bedrooms class="form-control" placeholder="how many?"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <button type="submit" class="btn btn-default" {{action 'saveRental' model}}>Save Rental</button>
+    </div>
+  </div>
+</div>
